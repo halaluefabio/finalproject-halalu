@@ -1,17 +1,18 @@
 <?php
     // require('conn.php');
-    require('add-user.php');
+    require('conn.php');
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    
-    
+     
     // $result = ("SELECT * FROM tab_cadastro WHERE username = '$username' AND password = '$password' ");
     // $data = $result->fetch_all(MYSQLI_ASSOC);
      //$data = $connexao->query($result);
- 
+
     $result = $connexao->query("SELECT id, username FROM tab_cadastro WHERE
-     USERNAME = '$username' AND PASSWORD = '$password'");
+     USERNAME = '$username' AND PASSWORD = '$password' ");
+
+    
      
     $data = $result->fetch_all(MYSQLI_ASSOC);
 

@@ -1,16 +1,13 @@
 <script>
     import VoltarHome from "./VoltarHome.svelte";
      import { usuarioAtual} from "../stores";
+     import { trocarEstado } from "../stores";
 
      
 
 </script>
 
 <main>
-
-
-{#if $usuarioAtual}  
-{/if}
 
     <h1>Ola, Aluno!</h1>
 
@@ -19,13 +16,12 @@
         target="_blank" 
         rel="noopener noreferrer"> <button>playlist</button> 
         </a>
-
-<div>
-    <button id="button"> ajuda </button>
-</div>
-
-
-    
+        
+    <div>
+            <!-- <button id="button" on:click={() => iniciarArquivos()}> ajuda </button> -->
+        <button id="button" on:click={() => trocarEstado("ajudaAlu")}> ajuda </button> 
+             
+    </div>   
 
 </main>
 

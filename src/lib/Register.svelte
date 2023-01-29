@@ -1,22 +1,27 @@
 <script>
+    
     import { usuarios } from "../stores";
     import VoltarHome from "./VoltarHome.svelte";
 
+    // let a = document.querySelector('input[name="opcao"]:checked')
+    
     const form = {
         username: "",
         pw: "",
+        opcao: "",
     
     };
 
     const addUser = () => {
         $usuarios = $usuarios.concat({
             username: form.username,
-            pw: form.pw,
-            opcao: form.opcao,
+            pw: form.pw, 
+            opcao: document.querySelector('input[name="opcao"]:checked').id  ,
         });
 
         form.username = "";
         form.pw = "";
+        form.opcao;
 
 
         alert("Cadastro efetuado com sucesso!");
@@ -30,6 +35,7 @@
 
     <div>
         <input
+            
             type="text"
             name="username"
             bind:value={form.username}
@@ -48,29 +54,30 @@
     </div>
 
          
-    <div> 
-        <p>Sou:</p>
+   
+
+<form>
+    <div>
+       <p>Sou:</p>
 
         <input type="radio"
             id="professor"
             name="opcao"
-            bind:value={form.opcao} 
-            required >
-            <label for="professor">Professor</label>
+            bind:value={form.opcao}
+            required > Professor
+            
     <br>           
         <input type="radio"
-            id="aluno" 
+            id="aluno"
             name="opcao"
             bind:value={form.opcao}
-            required>
-            <label for="aluno">Aluno</label>
+            required> Aluno
+            
     </div>     
- 
+</form>
 <br>
 
-    <button>
-            Cadastrar
-    </button>
+<input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
 
 
     </fieldset>

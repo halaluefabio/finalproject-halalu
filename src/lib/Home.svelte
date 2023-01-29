@@ -19,21 +19,17 @@
   <nav class="menu" >
   
       <div class="buhome" on:click={() => trocarEstado("home")}>Home</div>
+      <div class="busobre" on:click={() => trocarEstado("sobre")}>Sobre</div>     
   
-      <div class="busobre" on:click={() => trocarEstado("sobre")}>Sobre</div>
-  
-      <div on:click={() => trocarEstado("professor")}>Professor</div>
-      <div on:click={() => trocarEstado("aluno")}>Aluno</div>
-       
-  
-      {#if !$usuarioAtual}
-        <div class="bucadastro" on:click={() => trocarEstado("register")}>Cadastrar</div>
-  
-        <div class="bulogin" on:click={() => trocarEstado("login")}>Login</div>
+      {#if $usuarioAtual}
+        <div on:click={() => trocarEstado("aluno")}>Aluno</div> 
+        <div on:click={() => trocarEstado("professor")}>Professor</div>  
+        <div on:click={() => ($usuarioAtual = null)}> <button>Logout</button> </div>
+
       {:else}
-       <!-- <div on:click={() => trocarEstado("aluno")}>Aluno</div> -->
-        <div on:click={() => ($usuarioAtual = null)}>Logout</div>
-      {/if}
+        <div class="bucadastro" on:click={() => trocarEstado("register")}>Cadastrar</div>
+        <div class="bulogin" on:click={() => trocarEstado("login")}>Login</div>
+        {/if}
     </nav>
    
     <style >

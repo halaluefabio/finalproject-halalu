@@ -1,11 +1,10 @@
 
 <script>
 
-    import { paginaAtual, login } from "../stores";
+    import { paginaAtual, login,} from "../stores";
     import VoltarHome from "./VoltarHome.svelte";
     import { usuarioAtual } from "../stores";
-
-
+    
 
     const form = {
         username: "",
@@ -15,11 +14,13 @@
     const handleForm = async () =>{
         await login (form.username, form.pw);
         if ($usuarioAtual){
-            $paginaAtual = 'home';
-        }
+          $paginaAtual = 'home';
+        } 
     };
     
     </script>
+
+    <main>
     
     <form on:submit|preventDefault={handleForm} >
         <fieldset>
@@ -39,7 +40,7 @@
             required 
             />
             
-            <button>Entrar</button>
+            <button>login</button>
         </fieldset>
     </form>
 
@@ -48,6 +49,6 @@
 <VoltarHome/>
 </button>
 
-
+</main>
 
     

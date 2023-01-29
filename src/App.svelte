@@ -8,6 +8,9 @@
   import Aluno from "./lib/Aluno.svelte";
   import { paginaAtual} from "./stores";
   import Professor from "./lib/Professor.svelte";
+    import AjudaProf from "./lib/AjudaProf.svelte";
+    import AjudaAlu from "./lib/AjudaAlu.svelte";
+    import Uploads from "./lib/Uploads.svelte";
 
   
 
@@ -58,6 +61,12 @@
       <Aluno />
     {:else if $paginaAtual == "professor"}
     <Professor />
+    {:else if $paginaAtual == "ajudaProf"}
+    <AjudaProf />
+    {:else if $paginaAtual == "ajudaAlu"}
+    <AjudaAlu />
+    {:else if $paginaAtual == "uploads"}
+    <Uploads />
      
     {/if}
   </div>
