@@ -1,11 +1,10 @@
- <script>
-    import { trocarEstado } from "../stores";
- </script>
+<script>
+   import { trocarEstado } from "../stores";
+</script>
 
- <h1>ajuda aluno</h1>
+<h1> <button class="mesa">Materais</button> </h1>
 
- <div>
-    <!-- <button id="button" on:click={() => iniciarArquivos()}> ajuda </button> -->
-     <button id="button" on:click={() => trocarEstado("aluno")}> voltar para o perfil </button> 
-     
- </div>
+<div>
+    <button class="lapis" id="button" on:click={() => trocarEstado("aluno")}> Voltar para o perfil </button> 
+    
+</div>

@@ -2,29 +2,29 @@
     import VoltarHome from "./VoltarHome.svelte";
      import { usuarioAtual} from "../stores";
      import { trocarEstado } from "../stores";
-
      
-
 </script>
 
 <main>
 
-    <h1>Ola, Aluno!</h1>
+    <h1><button class="rosa"> Olá, Aluno!</button></h1>
 
-    <p>Playlist com videos para você </p>
+    <p class="lirio">Playlist com vídeos para você </p>
         <a href="https://youtube.com/playlist?list=PL-UjvsbvwwyB4xd2REAEjnbBeTJ27_q3a" 
         target="_blank" 
-        rel="noopener noreferrer"> <button>playlist</button> 
+        rel="noopener noreferrer"> <button class="margarida">Playlist</button> 
         </a>
         
     <div>
-            <!-- <button id="button" on:click={() => iniciarArquivos()}> ajuda </button> -->
-        <button id="button" on:click={() => trocarEstado("ajudaAlu")}> ajuda </button> 
+
+        <button class="girasol" id="button" on:click={() => trocarEstado("AjudaAlu")}>Materias</button> 
              
-    </div>   
+    </div>  
+     
+    <img class="image" src="./src/imagens/índice-removebg-preview.png" />
 
 </main>
 
-<button>
+<button class="lavanda">
     <VoltarHome/>
 </button>

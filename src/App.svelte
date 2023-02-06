@@ -8,46 +8,15 @@
   import Aluno from "./lib/Aluno.svelte";
   import { paginaAtual} from "./stores";
   import Professor from "./lib/Professor.svelte";
-    import AjudaProf from "./lib/AjudaProf.svelte";
-    import AjudaAlu from "./lib/AjudaAlu.svelte";
-    import Uploads from "./lib/Uploads.svelte";
+  import AjudaProf from "./lib/AjudaProf.svelte";
+  import AjudaAlu from "./lib/AjudaAlu.svelte";
+  import Uploads from "./lib/Uploads.svelte";
 
-  
-
-  
-  /*
-  function mudarPagina(pagina) {
-    $paginaAtual = pagina;
-  }
-*/
 
 </script>
 
 <main>
   
-<!--
-  <h1>HALALU</h1>
-  <nav>
-    <div on:click={() => mudarPagina("home")}>Home</div>
-
-    <div on:click={() => mudarPagina("sobre")}>Sobre</div>
-
-    <div on:click={() => mudarPagina("aluno")}>Aluno</div>
-
-    <div on:click={() => mudarPagina("professor")}>Professor</div>
-
-
-    {#if !$usuarioAtual}
-      <div on:click={() => mudarPagina("register")}>Cadastrar</div>
-      <div on:click={() => mudarPagina("login")}>Login</div>
-    {:else}
-      <div on:click={() => ($usuarioAtual = null)}>Logout</div>
-    {/if}
-
-   
-  </nav>
--->
-
   <div>
     {#if $paginaAtual == "home"}
       <Home />
@@ -61,9 +30,9 @@
       <Aluno />
     {:else if $paginaAtual == "professor"}
     <Professor />
-    {:else if $paginaAtual == "ajudaProf"}
+    {:else if $paginaAtual == "AjudaProf"}
     <AjudaProf />
-    {:else if $paginaAtual == "ajudaAlu"}
+    {:else if $paginaAtual == "AjudaAlu"}
     <AjudaAlu />
     {:else if $paginaAtual == "uploads"}
     <Uploads />
@@ -73,17 +42,3 @@
 </main>
 
 
-<!--
-<style>
-  nav {
-    display: flex;
-    gap: 0.5em;
-    justify-content: space-between;
-  }
-  nav > div {
-    border: 1px solid black;
-    padding: 0 1em;
-    cursor: pointer;
-  }
-</style>
--->

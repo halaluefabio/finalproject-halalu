@@ -3,7 +3,7 @@
     $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'halalu-teste3';
+    $dbName = 'halalu-final';
 
     $connexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 

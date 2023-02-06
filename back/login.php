@@ -9,8 +9,8 @@
     // $data = $result->fetch_all(MYSQLI_ASSOC);
      //$data = $connexao->query($result);
 
-    $result = $connexao->query("SELECT id, username FROM tab_cadastro WHERE
-     USERNAME = '$username' AND PASSWORD = '$password' ");
+    $result = $connexao->query("SELECT id, username, opcao FROM tab_cadastro WHERE
+     USERNAME = '$username' AND PASSWORD = '$password'");
 
     
      

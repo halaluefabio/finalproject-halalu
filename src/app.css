@@ -1,86 +1,826 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #ffffff;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-
-  background-color: #498fd1;
+  font-family: 'Poppins';
+  background-color: #00BFFF;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.inicio .titulo {
+  margin-top: 18px;
+  color: black;
+  width: 16%;
+  font-size: 50px;
+  margin-left: 35px;
 }
 
-.card {
-  padding: 2em;
+img {
+  margin-top: 8%;
+  width: 800px;
+  height: 600px;
+  float: right;
+  display: block;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.mei {
+  margin-left: 4%;
+  color: black;
+  font-size: 55px;
+  display: inline-block;
+  width: 420px;
+  margin-top: 13%;
+}
+
+.meio {
+  margin-left: 4%;
+  color: black;
+  width: 85%;
+  font-size: 24px;
+  display: inline-block;
+  width: 430px;
+  margin-top: 0%;
+}
+
+.menu {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 10px;
+  position: absolute;
+  margin-left: 30px;
+  top: 10px;
+  right: 4px;
+  margin: 15px 0px;
+  width: 65%;
+  direction: rtl;
+}
+
+.fundo-inicio {
+  background-color: #353ad2;
+  z-index: -1;
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  top: 0%;
+  position: absolute;
+  opacity: 0.4;
+}
+
+.menu .busobre {
+  color: black;
+  font-size: 19px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.menu .busobre:hover {
+  background-color: white
+}
+
+.menu .bulogin {
+  color: black;
+  font-size: 19px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.menu .bulogin:hover {
+  background-color: white;
+}
+
+.menu .bucadastro {
+  color: black;
+  font-size: 19px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.menu .bucadastro:hover {
+  background-color: white;
+}
+
+.menu .buhome {
+  color: black;
+  font-size: 19px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.menu .buhome:hover {
+  background-color: white;
+}
+
+
+.butao-inicio {
+  background: none;
+  color: black;
+   border: 0;
+   position: relative;
+  padding: 15px;
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  margin-left: 500px;
+  margin-top: 10%;
+}
+
+.butao-inicio:after {
+  content: '';
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+transition: inherit;
+margin-top:-3%;
+left: -2%;
+opacity: 0.8;
+z-index: -1;
+}
+
+.butao-inicio:hover:after {
+  width: calc(100% + 10px);
+  border-radius: 20px;
+  opacity: 0.6;
+}
+
+
+.bu-voltar {
+  margin-top: 8%;
+  font-size: 'Poppins', sans-serif;
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-size: 1.2em;
+  background-color: black;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.bu-login {
+  background-color: black;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+#form {
+  margin-top: 10%;
+  margin-left: 58%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 70px;
+  width: min-content;
+  align-items: center;
+  color: black;
+
+}
+
+.title {
+  align-items: center;
+  font-size: 1.8em;
+  margin-bottom: 10%;
+}
+
+.imput {
+  min-width: 200px;
+  border-radius: 22px;
+  border: 2px black solid;
+  padding: 5px;
+  margin: 6px 0px 12px -5px;
+
+}
+
+.imputt {
+  min-width: 200px;
+  border-radius: 22px;
+  border: 2px black solid;
+  padding: 5px;
+  margin: 6px 0px 12px -5px;
+  width: 80%;
+  font-size: 11pt;
+}
+
+#btn {
+  margin-top: 10%;
+  width: 100%;
   text-align: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+#btn button {
+  font-size: 'Poppins', sans-serif;
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-size: 1.2em;
+  background-color: black;
+  border-radius: 20px;
+  outline: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #ffff;
-    background-color: #ffffff;
+.imagemhom {
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  top: -4%;
+}
+
+.fundo-inicio-login {
+  background-color: #353ad2;
+  z-index: -1;
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  top: 0%;
+  position: absolute;
+}
+
+.reg {
+  color: black;
+ text-align: center;
+ text-decoration:underline ;
+}
+
+.reg:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.quem {
+  border: none;
+  background-color: #353ad2;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-left: 500px;
+text-align: left;
+color: black;
+font-size: 25px;
+line-height: 29px;
+width: 200px;
+
+}
+
+.somos {
+  color: black;
+  margin-left: 410px;
+  text-align: left;
+  font-size: 20px;
+}
+.campus {
+  color: black;
+  margin-left: 400px;
+  text-align: left;
+  font-size: 20px;
+}
+.internet {
+  color: black;
+  margin-left: 500px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.obg { 
+  margin-top: 200px;
+  margin-right: 450px;
+  font-size: 25px;
+  margin-left: 1400px;
+  border: none;
+  border-radius: 50px;
+  width: 145px;
+  background-color: #353ad2;
+  font-weight: bold;
+}
+
+.ajudando {
+  margin-right: 60px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.outro {
+  margin-right: 60px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.pessoas {
+  margin-top: 100px;
+  font-size: 25px;
+  margin-left: 900px;
+text-align: center;
+border: none;
+border-radius: 50px;
+background-color: #353ad2;
+font-weight: bold;
+}
+
+.integrantes {
+  font-size: 20px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.maisum {
+  background-color: black;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.5s all ease-in-out;
+  margin-left: 1500px;
+  margin-top: 0px;
+  border-radius: 20px;
+}
+
+.maisum:hover{
+  transform: scale(1.1);
+}
+
+.imagemobg {
+  width: 500px;
+  height: 400px;
+  z-index: -1;
+  margin-right: 1300px;
+  position: absolute;
+  top: 3%;
+}
+
+.imagemquem {
+  margin-top: 0%;
+  width: 400px;
+  height: 300px;
+  margin-right: 100px;
+}
+
+
+.fundo-cad {
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  top: 0%;
+}
+
+.tutu {
+align-items: center;
+color: black;
+font-weight: bolder;
+font-size: 25px;
+}
+
+.impute {
+  min-width: 200px;
+  border-radius: 22px;
+  border: 2px black solid;
+  padding: 5px;
+  margin: 6px 0px 12px -5px;
+
+}
+
+.imputee {
+  min-width: 200px;
+  border-radius: 22px;
+  border: 2px black solid;
+  padding: 5px;
+  margin: 6px 0px 12px -5px;
+  width: 80%;
+  font-size: 11pt;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.uiui {
+  margin-top: 10%;
+  margin-left: 58%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 70px;
+  width: min-content;
+  align-items: center;
+  color: black;
+}
+
+.aiai {
+  background: #fff;
+  border-radius: 10px;
+  padding: 70px;
+  width: min-content;
+  align-items: center;
+  color: black;
+
+}
+
+.unha {
+  font-size: 'Poppins', sans-serif;
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-size: 1.2em;
+  background-color: black;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.pe {
+  font-size: 'Poppins', sans-serif;
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-size: 1.2em;
+  background-color: black;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer; 
+}
+
+.eu {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.lala {
+  text-align: center;
+  margin-top: 10px;
+  z-index: -1px;
+  padding: 20px;
+}
+
+.lele {
+background-color: #0039c879;
+  text-align: center;
+  margin-top: 80px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 400px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.lili {
+  margin-top: 30px;
+  font-size: 20px;
+  font-style: italic;
+text-align: center;
+}
+
+.lolo {
+  text-align: center;
+  margin-left: 30px;
+  font-style: normal;
+background-color: #0039c879;
+}
+
+.lulu {
+  margin-right: 30px;
+  margin-top: 80px;
+  font-size: 20px;
+  font-style: italic;
+text-align: center;
+}
+
+.lale{
+font-size: 22px;
+margin-right: 10px;
+  font-style: normal;
+background-color: #0039c879;
+
+}
+
+.lilo {
+  margin-top: 100px;
+  font-size: 20px;
+  font-style: italic;
+  width: max-content;
+  height: 55px;
+  margin-left: 450px;
+  padding: 5px;
+text-align: center;
+}
+
+.lolu {
+  font-style: normal;
+background-color:#0039c879;
+font-size: 23px;
+text-align: center;
+}
+
+.butu {
+  background-color: black;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  margin-left: 1500px;
+  margin-top: 200px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.vida {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.visoca {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.imagemJU {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  opacity: 0.4;
+  margin-right: 50px;
+}
+
+.imagemju {
+  margin-right: 1500px;
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+}
+
+.tigre {
+margin-top: 100px;
+margin-left: 750px;
+border: none;
+border-radius: 50px;
+background-color: #353ad2;
+font-size: 40px;
+font-weight: bold;
+}
+
+.leao {
+margin-left: 780px;
+font-size: 20px;
+font-weight: bolder;
+text-decoration: underline;
+}
+
+.papagaio {
+  width: 164px;
+margin-top: 100px;
+margin-left: 1500px;
+border: black;
+border-radius: 50px;
+background-color:black;
+color: white;
+font-weight: bold;
+font-size: 22px;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.papagaio:hover {
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
+}
+
+.zebra {
+  width: 162px;
+  margin-top: 60px;
+  margin-left: 1500px;
+  border: black;
+  border-radius: 50px;
+  background-color:black;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.zebra:hover {
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
+}
+
+.gato {
+  width: 162px;
+  margin-top: 60px;
+  margin-left: 1500px;
+  border: black;
+  border-radius: 50px;
+  background-color:black;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.gato:hover {
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
+}
+.cachorro {
+  width: 162px;
+  margin-top: 60px;
+  margin-left: 1500px;
+  border: black;
+  border-radius: 50px;
+  background-color:black;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.cachorro:hover {
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
 }
 
 
+.sol{
+  background-color: #353ad2;
+  border: none;
+  border-radius: 50px;
+  margin-left: 750px;
+  font-size: 40px;
+  margin-top: 60px;
+  font-weight: bold;
+  width: 400px;
+}
+.estrela{
+margin-top: 100px;
+margin-left: 300px;
 
+}
+
+.lua{
+margin-top: 200px;
+border: none;
+border-radius: 50px;
+width: 300px;
+background-color: black;
+color: #ffffff;
+font-weight: bold;
+cursor: pointer;
+font-size: 20px;
+margin-left: 800px;
+}
+
+.estrela{
+margin-left: 800px;
+margin-top: 40px;
+}
+
+.cometa{
+  background-color: black;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  margin-left: 1500px;
+  margin-top: 300px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.rosa {
+  margin-top: 100px;
+  margin-left: 850px;
+  border: none;
+  border-radius: 50px;
+  background-color: #353ad2;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.lirio{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.girasol {
+  width: 162px;
+  margin-top: 80px;
+  margin-left: 1470px;
+  border: black;
+  border-radius: 10px;
+  background-color:black;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.girasol:hover {
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
+}
+.margarida {
+  width: 162px;
+  margin-top: 80px;
+  margin-left: 1470px;
+  border: black;
+  border-radius: 10px;
+  background-color:black;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.margarida:hover{
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
+}
+
+.lavanda {
+  width: 162px;
+  margin-top: 80px;
+  margin-left: 1480px;
+  border: black;
+  border-radius: 10px;
+  background-color:black;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.lavanda:hover{
+  text-align: inherit;
+  color: black;
+  background-color: transparent;
+}
+
+.imagemprof{
+  position: absolute;
+  margin-right: 1000px;
+  margin-top: -300px;
+}
+
+.image {
+  position: absolute;
+  margin-top: -100px;
+}
+
+.mesa {
+margin-top: 70px;
+margin-left: 860px;
+border: none;
+font-size: 40px;
+background-color: #353ad2;
+border-radius: 40px;
+font-weight: bold;
+height: 50px;
+
+}
+
+.lapis{
+  font-weight: bold;
+margin-top: 400px;
+margin-left: 852px;
+background-color: black;
+color: white;
+border: none;
+border-radius: 30px;
+font-size: 23px;
+height: 45px;
+cursor: pointer;
+}
